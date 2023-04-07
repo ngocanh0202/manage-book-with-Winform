@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_LOGIN.cs" />
+    <Compile Include="DAL\DAL_LOGIN.cs" />
     <Compile Include="GUI\Form_bansach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,10 +138,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="QL_sach.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
