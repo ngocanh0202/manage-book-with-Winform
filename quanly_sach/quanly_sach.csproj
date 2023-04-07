@@ -116,6 +116,9 @@
     <EmbeddedResource Include="GUI\Form_chinh.resx">
       <DependentUpon>Form_chinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form_tinhtien_thue_ban.resx">
+      <DependentUpon>Form_tinhtien_thue_ban.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -144,7 +147,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="QL_sach_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QL_sach.mdf</DependentUpon>
     </Content>
   </ItemGroup>

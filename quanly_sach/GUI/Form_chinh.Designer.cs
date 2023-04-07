@@ -77,6 +77,7 @@ namespace quanly_sach.GUI
             this.btn_chobanthuesach.TabIndex = 5;
             this.btn_chobanthuesach.Text = "Cho Bán hoặc Thuê sách";
             this.btn_chobanthuesach.UseVisualStyleBackColor = true;
+            this.btn_chobanthuesach.Click += new System.EventHandler(this.btn_chobanthuesach_Click);
             // 
             // btn_quanlysach
             // 
@@ -92,12 +93,13 @@ namespace quanly_sach.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1131, 470);
+            this.ClientSize = new System.Drawing.Size(1213, 555);
             this.Controls.Add(this.btn_quanlysach);
             this.Controls.Add(this.btn_chobanthuesach);
             this.Controls.Add(this.btn_nhaploaisach);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_nhapthongtinsach);
+            this.IsMdiContainer = true;
             this.Name = "Form_chinh";
             this.Text = "Form_chinh";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

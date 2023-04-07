@@ -16,7 +16,7 @@ namespace quanly_sach
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GUI.login());
+            Application.Run(new GUI.Form_chinh());
         }
     }
 }
