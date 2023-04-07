@@ -75,6 +75,18 @@
     <Compile Include="GUI\Form_chinh.Designer.cs">
       <DependentUpon>Form_chinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Form_hienthongtinnguoiban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form_hienthongtinnguoiban.Designer.cs">
+      <DependentUpon>Form_hienthongtinnguoiban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form_hienthongtinnguoithue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form_hienthongtinnguoithue.Designer.cs">
+      <DependentUpon>Form_hienthongtinnguoithue.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Form_nhaploaisach.cs">
       <SubType>Form</SubType>
     </Compile>

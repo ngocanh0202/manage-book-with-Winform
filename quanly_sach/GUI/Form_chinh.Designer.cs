@@ -35,6 +35,8 @@ namespace quanly_sach.GUI
             this.btn_nhaploaisach = new System.Windows.Forms.Button();
             this.btn_chobanthuesach = new System.Windows.Forms.Button();
             this.btn_quanlysach = new System.Windows.Forms.Button();
+            this.btn_hienthongtin = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +91,33 @@ namespace quanly_sach.GUI
             this.btn_quanlysach.Text = "Quản lý ngân sách";
             this.btn_quanlysach.UseVisualStyleBackColor = true;
             // 
+            // btn_hienthongtin
+            // 
+            this.btn_hienthongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_hienthongtin.Location = new System.Drawing.Point(24, 395);
+            this.btn_hienthongtin.Name = "btn_hienthongtin";
+            this.btn_hienthongtin.Size = new System.Drawing.Size(248, 40);
+            this.btn_hienthongtin.TabIndex = 8;
+            this.btn_hienthongtin.Text = "Hiện thông tin người bán";
+            this.btn_hienthongtin.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(24, 441);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(248, 40);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Hiện thông tin người thuê";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form_chinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1213, 555);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_hienthongtin);
             this.Controls.Add(this.btn_quanlysach);
             this.Controls.Add(this.btn_chobanthuesach);
             this.Controls.Add(this.btn_nhaploaisach);
@@ -114,5 +138,7 @@ namespace quanly_sach.GUI
         private System.Windows.Forms.Button btn_nhaploaisach;
         private System.Windows.Forms.Button btn_chobanthuesach;
         private System.Windows.Forms.Button btn_quanlysach;
+        private System.Windows.Forms.Button btn_hienthongtin;
+        private System.Windows.Forms.Button button1;
     }
 }
