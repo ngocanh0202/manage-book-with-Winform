@@ -63,12 +63,6 @@
   <ItemGroup>
     <Compile Include="BLL\BLL_LOGIN.cs" />
     <Compile Include="DAL\DAL_LOGIN.cs" />
-    <Compile Include="GUI\Form_bansach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Form_bansach.Designer.cs">
-      <DependentUpon>Form_bansach.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\Form_chinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +98,6 @@
     </Compile>
     <Compile Include="GUI\Form_quanlyngansach.Designer.cs">
       <DependentUpon>Form_quanlyngansach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\Form_thuesach.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\Form_thuesach.Designer.cs">
-      <DependentUpon>Form_thuesach.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Form_tinhtien_thue_ban.cs">
       <SubType>Form</SubType>
