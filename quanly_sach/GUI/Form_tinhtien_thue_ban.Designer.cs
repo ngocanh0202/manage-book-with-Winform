@@ -41,7 +41,7 @@ namespace quanly_sach.GUI
             this.lb_loaisach = new System.Windows.Forms.Label();
             this.cb_loaisach = new System.Windows.Forms.ComboBox();
             this.btn_bansach = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_thuesach = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_makhachhang = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_formtinhtien)).BeginInit();
@@ -157,15 +157,17 @@ namespace quanly_sach.GUI
             this.btn_bansach.TabIndex = 11;
             this.btn_bansach.Text = "Bán sách";
             this.btn_bansach.UseVisualStyleBackColor = true;
+            this.btn_bansach.Click += new System.EventHandler(this.btn_bansach_Click);
             // 
-            // button1
+            // btn_thuesach
             // 
-            this.button1.Location = new System.Drawing.Point(692, 114);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Thuê sách";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_thuesach.Location = new System.Drawing.Point(692, 114);
+            this.btn_thuesach.Name = "btn_thuesach";
+            this.btn_thuesach.Size = new System.Drawing.Size(96, 23);
+            this.btn_thuesach.TabIndex = 12;
+            this.btn_thuesach.Text = "Thuê sách";
+            this.btn_thuesach.UseVisualStyleBackColor = true;
+            this.btn_thuesach.Click += new System.EventHandler(this.btn_thuesach_Click);
             // 
             // label1
             // 
@@ -192,7 +194,7 @@ namespace quanly_sach.GUI
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txt_makhachhang);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_thuesach);
             this.Controls.Add(this.btn_bansach);
             this.Controls.Add(this.cb_loaisach);
             this.Controls.Add(this.lb_loaisach);
@@ -228,7 +230,7 @@ namespace quanly_sach.GUI
         private System.Windows.Forms.Label lb_loaisach;
         private System.Windows.Forms.ComboBox cb_loaisach;
         private System.Windows.Forms.Button btn_bansach;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_thuesach;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_makhachhang;
     }

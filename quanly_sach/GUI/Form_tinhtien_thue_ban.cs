@@ -16,5 +16,15 @@ namespace quanly_sach.GUI
         {
             InitializeComponent();
         }
+
+        private void btn_bansach_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_thuesach_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
