@@ -155,9 +155,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="QL_sach.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="QL_sach.mdf" />
     <Content Include="QL_sach_log.ldf">
       <DependentUpon>QL_sach.mdf</DependentUpon>
     </Content>
