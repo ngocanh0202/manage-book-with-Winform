@@ -61,8 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_BANSACH_THUESACH.cs" />
     <Compile Include="BLL\BLL_LOGIN.cs" />
     <Compile Include="DAL\DAL_LOGIN.cs" />
+    <Compile Include="DAL\DAL_BANSACH_THUESACH.cs" />
     <Compile Include="GUI\Form_chinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +82,12 @@
     </Compile>
     <Compile Include="GUI\Form_hienthongtinnguoithue.Designer.cs">
       <DependentUpon>Form_hienthongtinnguoithue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form_ngaythuetra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form_ngaythuetra.Designer.cs">
+      <DependentUpon>Form_ngaythuetra.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Form_nhaploaisach.cs">
       <SubType>Form</SubType>
@@ -116,6 +124,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Form_chinh.resx">
       <DependentUpon>Form_chinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form_ngaythuetra.resx">
+      <DependentUpon>Form_ngaythuetra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form_tinhtien_thue_ban.resx">
       <DependentUpon>Form_tinhtien_thue_ban.cs</DependentUpon>

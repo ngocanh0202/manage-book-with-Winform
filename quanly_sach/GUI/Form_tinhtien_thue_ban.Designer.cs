@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace quanly_sach.GUI
 {
     partial class Form_tinhtien_thue_ban
@@ -43,7 +45,10 @@ namespace quanly_sach.GUI
             this.btn_bansach = new System.Windows.Forms.Button();
             this.btn_thuesach = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_makhachhang = new System.Windows.Forms.TextBox();
+            this.txt_tenkhachhang = new System.Windows.Forms.TextBox();
+            this.lb_lsotien = new System.Windows.Forms.Label();
+            this.lb_sotien = new System.Windows.Forms.Label();
+            this.btn_reset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_formtinhtien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +61,7 @@ namespace quanly_sach.GUI
             this.dataGridView_formtinhtien.RowTemplate.Height = 24;
             this.dataGridView_formtinhtien.Size = new System.Drawing.Size(776, 141);
             this.dataGridView_formtinhtien.TabIndex = 0;
+            this.dataGridView_formtinhtien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_formtinhtien_CellClick);
             // 
             // lb_lmasach
             // 
@@ -113,7 +119,7 @@ namespace quanly_sach.GUI
             this.txt_mota.Location = new System.Drawing.Point(122, 170);
             this.txt_mota.Multiline = true;
             this.txt_mota.Name = "txt_mota";
-            this.txt_mota.Size = new System.Drawing.Size(414, 121);
+            this.txt_mota.Size = new System.Drawing.Size(414, 85);
             this.txt_mota.TabIndex = 6;
             // 
             // btn_timkiem
@@ -124,6 +130,7 @@ namespace quanly_sach.GUI
             this.btn_timkiem.TabIndex = 7;
             this.btn_timkiem.Text = "Tìm kiếm";
             this.btn_timkiem.UseVisualStyleBackColor = true;
+            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
             // 
             // txt_timkiem
             // 
@@ -148,6 +155,7 @@ namespace quanly_sach.GUI
             this.cb_loaisach.Name = "cb_loaisach";
             this.cb_loaisach.Size = new System.Drawing.Size(138, 24);
             this.cb_loaisach.TabIndex = 10;
+            this.cb_loaisach.SelectedIndexChanged += new System.EventHandler(this.cb_loaisach_SelectedIndexChanged);
             // 
             // btn_bansach
             // 
@@ -175,16 +183,46 @@ namespace quanly_sach.GUI
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(309, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 25);
+            this.label1.Size = new System.Drawing.Size(172, 25);
             this.label1.TabIndex = 13;
-            this.label1.Text = "Mã Khách Hàng :";
+            this.label1.Text = "Tên Khách Hàng :";
             // 
-            // txt_makhachhang
+            // txt_tenkhachhang
             // 
-            this.txt_makhachhang.Location = new System.Drawing.Point(480, 56);
-            this.txt_makhachhang.Name = "txt_makhachhang";
-            this.txt_makhachhang.Size = new System.Drawing.Size(129, 22);
-            this.txt_makhachhang.TabIndex = 14;
+            this.txt_tenkhachhang.Location = new System.Drawing.Point(480, 56);
+            this.txt_tenkhachhang.Name = "txt_tenkhachhang";
+            this.txt_tenkhachhang.Size = new System.Drawing.Size(129, 22);
+            this.txt_tenkhachhang.TabIndex = 14;
+            // 
+            // lb_lsotien
+            // 
+            this.lb_lsotien.AutoSize = true;
+            this.lb_lsotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_lsotien.Location = new System.Drawing.Point(32, 264);
+            this.lb_lsotien.Name = "lb_lsotien";
+            this.lb_lsotien.Size = new System.Drawing.Size(84, 25);
+            this.lb_lsotien.TabIndex = 15;
+            this.lb_lsotien.Text = "Số tiền :";
+            // 
+            // lb_sotien
+            // 
+            this.lb_sotien.AutoSize = true;
+            this.lb_sotien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_sotien.Location = new System.Drawing.Point(117, 264);
+            this.lb_sotien.Name = "lb_sotien";
+            this.lb_sotien.Size = new System.Drawing.Size(112, 25);
+            this.lb_sotien.TabIndex = 16;
+            this.lb_sotien.Text = " < Số tiền >";
+            // 
+            // btn_reset
+            // 
+            this.btn_reset.Location = new System.Drawing.Point(713, 202);
+            this.btn_reset.Name = "btn_reset";
+            this.btn_reset.Size = new System.Drawing.Size(75, 23);
+            this.btn_reset.TabIndex = 17;
+            this.btn_reset.Text = "Reset";
+            this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // Form_tinhtien_thue_ban
             // 
@@ -192,7 +230,10 @@ namespace quanly_sach.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txt_makhachhang);
+            this.Controls.Add(this.btn_reset);
+            this.Controls.Add(this.lb_sotien);
+            this.Controls.Add(this.lb_lsotien);
+            this.Controls.Add(this.txt_tenkhachhang);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_thuesach);
             this.Controls.Add(this.btn_bansach);
@@ -210,6 +251,7 @@ namespace quanly_sach.GUI
             this.Name = "Form_tinhtien_thue_ban";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form_tinhtien";
+            this.Load += new System.EventHandler(this.Form_tinhtien_thue_ban_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_formtinhtien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,6 +274,19 @@ namespace quanly_sach.GUI
         private System.Windows.Forms.Button btn_bansach;
         private System.Windows.Forms.Button btn_thuesach;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_makhachhang;
+        private System.Windows.Forms.TextBox txt_tenkhachhang;
+        private System.Windows.Forms.Label lb_lsotien;
+        private System.Windows.Forms.Label lb_sotien;
+        private Button btn_reset;
+
+        public Label Lb_sotien { get => lb_sotien; set => lb_sotien = value; }
+        public Label Lb_tensach { get => lb_tensach; set => lb_tensach = value; }
+        public TextBox Txt_makhachhang { get => txt_tenkhachhang; set => txt_tenkhachhang = value; }
+        public Label Lb_masach { get => lb_masach; set => lb_masach = value; }
+        public DataGridView DataGridView_formtinhtien { get => dataGridView_formtinhtien; set => dataGridView_formtinhtien = value; }
+        public TextBox Txt_mota { get => txt_mota; set => txt_mota = value; }
+        public ComboBox Cb_loaisach { get => cb_loaisach; set => cb_loaisach = value; }
+        public TextBox Txt_tenkhachhang { get => txt_tenkhachhang; set => txt_tenkhachhang = value; }
+        public TextBox Txt_timkiem { get => txt_timkiem; set => txt_timkiem = value; }
     }
 }

@@ -96,7 +96,7 @@ namespace quanly_sach.GUI
             this.btn_hienthongtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_hienthongtin.Location = new System.Drawing.Point(24, 395);
             this.btn_hienthongtin.Name = "btn_hienthongtin";
-            this.btn_hienthongtin.Size = new System.Drawing.Size(248, 40);
+            this.btn_hienthongtin.Size = new System.Drawing.Size(345, 40);
             this.btn_hienthongtin.TabIndex = 8;
             this.btn_hienthongtin.Text = "Hiện thông tin người bán";
             this.btn_hienthongtin.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@ namespace quanly_sach.GUI
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(24, 441);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(248, 40);
+            this.button1.Size = new System.Drawing.Size(345, 40);
             this.button1.TabIndex = 9;
             this.button1.Text = "Hiện thông tin người thuê";
             this.button1.UseVisualStyleBackColor = true;
