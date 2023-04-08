@@ -54,9 +54,12 @@ namespace quanly_sach.GUI
             // 
             // dataGridView_formtinhtien
             // 
+            this.dataGridView_formtinhtien.AllowUserToAddRows = false;
+            this.dataGridView_formtinhtien.AllowUserToDeleteRows = false;
             this.dataGridView_formtinhtien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_formtinhtien.Location = new System.Drawing.Point(12, 297);
             this.dataGridView_formtinhtien.Name = "dataGridView_formtinhtien";
+            this.dataGridView_formtinhtien.ReadOnly = true;
             this.dataGridView_formtinhtien.RowHeadersWidth = 51;
             this.dataGridView_formtinhtien.RowTemplate.Height = 24;
             this.dataGridView_formtinhtien.Size = new System.Drawing.Size(776, 141);
