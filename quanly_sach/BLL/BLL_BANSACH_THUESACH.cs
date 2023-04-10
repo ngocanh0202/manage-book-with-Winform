@@ -11,11 +11,15 @@ namespace quanly_sach.BLL
     class BLL_BANSACH_THUESACH
     {
         public DAL.DAL_BANSACH_THUESACH dal_bansach_thuesach;
+        DAL.DAL_SACH dal_sach;
+        DAL.DAL_LOAISACH dal_loai_sach;
         public GUI.Form_tinhtien_thue_ban ftinhtien;
         // Hàm khởi tạo
         public BLL_BANSACH_THUESACH(GUI.Form_tinhtien_thue_ban ftt)
         {
             dal_bansach_thuesach = new DAL.DAL_BANSACH_THUESACH();
+            dal_sach = new DAL.DAL_SACH();
+            dal_loai_sach = new DAL.DAL_LOAISACH();
             ftinhtien = ftt;
         }
         // Hàm bán sách
@@ -87,12 +91,12 @@ namespace quanly_sach.BLL
         // Show dữ liệu từ bảng sach vao datagridview
         public void bll_datagridview()
         {
-            ftinhtien.DataGridView_formtinhtien.DataSource = dal_bansach_thuesach.dal_loaddatasach();
+            ftinhtien.DataGridView_formtinhtien.DataSource = dal_sach.dal_loaddatasach();
         }
         // show dữ liệu từ bảng loaisach vào combobox
         public void bll_comobox()
         {
-            ftinhtien.Cb_loaisach.DataSource = dal_bansach_thuesach.dal_loadcbboxloaisach();
+            ftinhtien.Cb_loaisach.DataSource = dal_loai_sach.dal_loaddataloaisach();
             ftinhtien.Cb_loaisach.DisplayMember = "tenloaisach";
             ftinhtien.Cb_loaisach.ValueMember = "maloaisach";
         }
@@ -111,13 +115,13 @@ namespace quanly_sach.BLL
         // làm chức năng tìm kiếm
         public void bll_loadatatimkiem()
         {
-            ftinhtien.DataGridView_formtinhtien.DataSource = dal_bansach_thuesach.dal_timkiem(ftinhtien.Txt_timkiem.Text);
+            ftinhtien.DataGridView_formtinhtien.DataSource = dal_sach.dal_timkiem(ftinhtien.Txt_timkiem.Text);
         }
         // show datagridview từ loại sách được chọn
         public void bll_loadataloaisach()
         {
             if(chon == 0)
-                ftinhtien.DataGridView_formtinhtien.DataSource = dal_bansach_thuesach.dal_updatecbbox(ftinhtien.Cb_loaisach.SelectedValue.ToString());
+                ftinhtien.DataGridView_formtinhtien.DataSource = dal_sach.dal_sach_theo_maloaisach(ftinhtien.Cb_loaisach.SelectedValue.ToString());
         }
     }
 }

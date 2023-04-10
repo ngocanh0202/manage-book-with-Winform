@@ -63,8 +63,10 @@
   <ItemGroup>
     <Compile Include="BLL\BLL_BANSACH_THUESACH.cs" />
     <Compile Include="BLL\BLL_LOGIN.cs" />
+    <Compile Include="DAL\DAL_LOAISACH.cs" />
     <Compile Include="DAL\DAL_LOGIN.cs" />
     <Compile Include="DAL\DAL_BANSACH_THUESACH.cs" />
+    <Compile Include="DAL\DAL_SACH.cs" />
     <Compile Include="GUI\Form_chinh.cs">
       <SubType>Form</SubType>
     </Compile>

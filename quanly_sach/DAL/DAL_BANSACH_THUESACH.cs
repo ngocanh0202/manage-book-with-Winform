@@ -14,12 +14,7 @@ namespace quanly_sach.DAL
         {
             ldc = new lopdungchung();
         }
-        // lấy dữ liệu từ bảng sach
-        public DataTable dal_loaddatasach()
-        {
-            string sql = "select * from sach";
-            return ldc.loaddata(sql);
-        }
+        
         // Lấy dữ liệu từ bảng bansach
         public DataTable dal_loaddatabansach()
         {
@@ -30,24 +25,6 @@ namespace quanly_sach.DAL
         public DataTable dal_loaddatathuesach()
         {
             string sql = "select * from thuesach";
-            return ldc.loaddata(sql);
-        }
-        // lấy dữ liệu từ bảng loaisach
-        public DataTable dal_loadcbboxloaisach()
-        {
-            string sql = "select * from loaisach";
-            return ldc.loaddata(sql);
-        }
-        // tìm kiếm
-        public DataTable dal_timkiem(string tensach)
-        {
-            string sql = "select * from sach where tensach like '%" + tensach + "%' ";
-            return ldc.loaddata(sql);
-        }
-        // lấy dữ liệu bảng sach với maloaisach
-        public DataTable dal_updatecbbox(string loaisach)
-        {
-            string sql = "select * from sach where maloaisach = '" + loaisach + "' ";
             return ldc.loaddata(sql);
         }
         // cập nhập bảng bansach
