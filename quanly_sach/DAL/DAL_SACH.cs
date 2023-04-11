@@ -75,7 +75,7 @@ namespace quanly_sach.DAL
         }
         public object dall_tongsotiensachban()
         {
-            string sql = "SELECT SUM(s.sotien) as TongSoTien FROM sach s LEFT JOIN bansach bs ON s.masach = bs.masach WHERE bs.masach IS NOT NULL";
+            string sql = "SELECT SUM(sach.sotien) FROM sach where sach.masach in (select bansach.masach from bansach)";
             return ldc.tinhtien(sql);
         }
     }
