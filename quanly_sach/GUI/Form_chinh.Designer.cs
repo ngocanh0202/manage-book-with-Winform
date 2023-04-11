@@ -101,7 +101,7 @@ namespace quanly_sach.GUI
             this.btn_hienthongtin.Name = "btn_hienthongtin";
             this.btn_hienthongtin.Size = new System.Drawing.Size(345, 40);
             this.btn_hienthongtin.TabIndex = 8;
-            this.btn_hienthongtin.Text = "Hiện thông tin người bán";
+            this.btn_hienthongtin.Text = "Hiện thông tin người mua";
             this.btn_hienthongtin.UseVisualStyleBackColor = true;
             this.btn_hienthongtin.Click += new System.EventHandler(this.btn_hienthongtin_Click);
             // 
