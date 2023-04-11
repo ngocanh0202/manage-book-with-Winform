@@ -35,7 +35,7 @@ namespace quanly_sach.DAL
         }
         public void dal_them_sach(string masach, string tensach, string mota,string maloaisach,string sotien)
         {
-            string sql = "insert into sach values('" + masach + "',N'"+tensach+"','"+mota+"', '"+maloaisach+"','"+sotien+"')";
+            string sql = "insert into sach values('" + masach + "',N'"+tensach+"',N'"+mota+"', '"+maloaisach+"','"+sotien+"')";
             ldc.nonquery(sql);
         }
         public void dal_xoa_sach(string masach)
