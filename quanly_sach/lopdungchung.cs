@@ -52,5 +52,14 @@ namespace quanly_sach
             cn.Close();
             return dem;
         }
+        public object tinhtien(string sql)
+        {
+            SqlCommand cm = new SqlCommand(sql, cn);
+            cn.Open();
+            object dem = cm.ExecuteScalar();
+            cn.Close();
+            return dem;
+        }
+        
     }
 }

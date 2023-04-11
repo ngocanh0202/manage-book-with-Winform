@@ -51,7 +51,7 @@ namespace quanly_sach.GUI
         {
             if(check == 0)
             {
-                bll.dal_bansach_thuesach.dal_thuesach(bll.ftinhtien.Txt_tenkhachhang.Text, bll.ftinhtien.Lb_masach.Text, dtp_ngaythue.Value, dtp_ngaytra.Value, "còn hạn");
+                bll.dal_thuesach.dal_thuesach(bll.ftinhtien.Txt_tenkhachhang.Text, bll.ftinhtien.Lb_masach.Text, dtp_ngaythue.Value, dtp_ngaytra.Value, "còn hạn");
                 Application.OpenForms["Form_ngaythuetra"].Close();
             }
             else  if(check == 1)

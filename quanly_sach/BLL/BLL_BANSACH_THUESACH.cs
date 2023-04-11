@@ -10,23 +10,25 @@ namespace quanly_sach.BLL
 {
     class BLL_BANSACH_THUESACH
     {
-        public DAL.DAL_BANSACH_THUESACH dal_bansach_thuesach;
+        public DAL.DAL_THUESACH dal_thuesach;
+        DAL.DAL_BANSACH dal_bansach;
         DAL.DAL_SACH dal_sach;
         DAL.DAL_LOAISACH dal_loai_sach;
         public GUI.Form_tinhtien_thue_ban ftinhtien;
         // Hàm khởi tạo
         public BLL_BANSACH_THUESACH(GUI.Form_tinhtien_thue_ban ftt)
         {
-            dal_bansach_thuesach = new DAL.DAL_BANSACH_THUESACH();
+            dal_thuesach = new DAL.DAL_THUESACH();
             dal_sach = new DAL.DAL_SACH();
             dal_loai_sach = new DAL.DAL_LOAISACH();
+            dal_bansach = new DAL.DAL_BANSACH();
             ftinhtien = ftt;
         }
         // Hàm bán sách
         public void bll_updatebs()
         {
-            DataTable dtbs = dal_bansach_thuesach.dal_loaddatabansach();
-            DataTable dtts = dal_bansach_thuesach.dal_loaddatathuesach();
+            DataTable dtbs = dal_bansach.dal_loaddatabansach();
+            DataTable dtts = dal_thuesach.dal_loaddatathuesach();
             int dem = 0;
             for(int i = 0;i < dtbs.Rows.Count; i++)
             {
@@ -48,7 +50,7 @@ namespace quanly_sach.BLL
             }
             if (dem == 0)
             {
-                dal_bansach_thuesach.dal_updatadbbs(ftinhtien.Txt_tenkhachhang.Text, ftinhtien.Lb_masach.Text, ftinhtien.Lb_sotien.Text);
+                dal_bansach.dal_updatadbbs(ftinhtien.Txt_tenkhachhang.Text, ftinhtien.Lb_masach.Text, ftinhtien.Lb_sotien.Text);
             }else if(dem == 1)
             {
                 return;
@@ -57,8 +59,8 @@ namespace quanly_sach.BLL
         // Hàm thuê sách
         public void bll_thuesach()
         {
-            DataTable dtbs = dal_bansach_thuesach.dal_loaddatabansach();
-            DataTable dtts = dal_bansach_thuesach.dal_loaddatathuesach();
+            DataTable dtbs = dal_bansach.dal_loaddatabansach();
+            DataTable dtts = dal_thuesach.dal_loaddatathuesach();
             int dem = 0;
             for (int i = 0; i < dtbs.Rows.Count; i++)
             {

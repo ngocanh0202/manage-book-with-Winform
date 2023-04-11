@@ -1,4 +1,6 @@
 ﻿
+using System.Windows.Forms;
+
 namespace quanly_sach.GUI
 {
     partial class Form_hienthongtinnguoithue
@@ -29,12 +31,104 @@ namespace quanly_sach.GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_masach = new System.Windows.Forms.TextBox();
+            this.txt_tenkhachhang = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(33, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(731, 312);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 355);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mã sách: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 399);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tên khách hàng:";
+            // 
+            // txt_masach
+            // 
+            this.txt_masach.Location = new System.Drawing.Point(170, 352);
+            this.txt_masach.Name = "txt_masach";
+            this.txt_masach.Size = new System.Drawing.Size(155, 22);
+            this.txt_masach.TabIndex = 3;
+            // 
+            // txt_tenkhachhang
+            // 
+            this.txt_tenkhachhang.Location = new System.Drawing.Point(170, 399);
+            this.txt_tenkhachhang.Name = "txt_tenkhachhang";
+            this.txt_tenkhachhang.Size = new System.Drawing.Size(155, 22);
+            this.txt_tenkhachhang.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(354, 352);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "XÓA";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Form_hienthongtinnguoithue
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txt_tenkhachhang);
+            this.Controls.Add(this.txt_masach);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "Form_hienthongtinnguoithue";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form_hienthongtinnguoithue";
+            this.Load += new System.EventHandler(this.Form_hienthongtinnguoithue_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_masach;
+        private System.Windows.Forms.TextBox txt_tenkhachhang;
+        private System.Windows.Forms.Button button1;
+
+        public TextBox Txt_masach { get => txt_masach; set => txt_masach = value; }
+        public DataGridView DataGridView1 { get => dataGridView1; set => dataGridView1 = value; }
+        public TextBox Txt_masach1 { get => txt_masach; set => txt_masach = value; }
+        public TextBox Txt_tenkhachhang { get => txt_tenkhachhang; set => txt_tenkhachhang = value; }
     }
 }

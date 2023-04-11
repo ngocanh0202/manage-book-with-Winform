@@ -15,6 +15,13 @@ namespace quanly_sach.GUI
         public login()
         {
             InitializeComponent();
+            bll_login = new BLL.BLL_LOGIN(this);
+        }
+        BLL.BLL_LOGIN bll_login;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bll_login.dangnhap();
         }
     }
 }

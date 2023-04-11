@@ -49,6 +49,7 @@ namespace quanly_sach.GUI
             this.btn_nhapthongtinsach.TabIndex = 0;
             this.btn_nhapthongtinsach.Text = "Nhập thông tin sách";
             this.btn_nhapthongtinsach.UseVisualStyleBackColor = true;
+            this.btn_nhapthongtinsach.Click += new System.EventHandler(this.btn_nhapthongtinsach_Click);
             // 
             // pictureBox1
             // 
@@ -69,6 +70,7 @@ namespace quanly_sach.GUI
             this.btn_nhaploaisach.TabIndex = 3;
             this.btn_nhaploaisach.Text = "Nhập loại sách";
             this.btn_nhaploaisach.UseVisualStyleBackColor = true;
+            this.btn_nhaploaisach.Click += new System.EventHandler(this.btn_nhaploaisach_Click);
             // 
             // btn_chobanthuesach
             // 
@@ -90,6 +92,7 @@ namespace quanly_sach.GUI
             this.btn_quanlysach.TabIndex = 6;
             this.btn_quanlysach.Text = "Quản lý ngân sách";
             this.btn_quanlysach.UseVisualStyleBackColor = true;
+            this.btn_quanlysach.Click += new System.EventHandler(this.btn_quanlysach_Click);
             // 
             // btn_hienthongtin
             // 
@@ -100,6 +103,7 @@ namespace quanly_sach.GUI
             this.btn_hienthongtin.TabIndex = 8;
             this.btn_hienthongtin.Text = "Hiện thông tin người bán";
             this.btn_hienthongtin.UseVisualStyleBackColor = true;
+            this.btn_hienthongtin.Click += new System.EventHandler(this.btn_hienthongtin_Click);
             // 
             // button1
             // 
@@ -110,6 +114,7 @@ namespace quanly_sach.GUI
             this.button1.TabIndex = 9;
             this.button1.Text = "Hiện thông tin người thuê";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form_chinh
             // 

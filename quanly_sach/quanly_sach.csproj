@@ -63,9 +63,15 @@
   <ItemGroup>
     <Compile Include="BLL\BLL_BANSACH_THUESACH.cs" />
     <Compile Include="BLL\BLL_LOGIN.cs" />
+    <Compile Include="BLL\BLL_NGUOIMUA.cs" />
+    <Compile Include="BLL\BLL_NGUOITHUE.cs" />
+    <Compile Include="BLL\BLL_NHAPLOAISACH.cs" />
+    <Compile Include="BLL\BLL_NHAPTHONGTINSACH.cs" />
+    <Compile Include="BLL\BLL_QUANLYNGANSACH.cs" />
+    <Compile Include="DAL\DAL_BANSACH.cs" />
     <Compile Include="DAL\DAL_LOAISACH.cs" />
     <Compile Include="DAL\DAL_LOGIN.cs" />
-    <Compile Include="DAL\DAL_BANSACH_THUESACH.cs" />
+    <Compile Include="DAL\DAL_THUESACH.cs" />
     <Compile Include="DAL\DAL_SACH.cs" />
     <Compile Include="GUI\Form_chinh.cs">
       <SubType>Form</SubType>
@@ -127,11 +133,29 @@
     <EmbeddedResource Include="GUI\Form_chinh.resx">
       <DependentUpon>Form_chinh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form_hienthongtinnguoiban.resx">
+      <DependentUpon>Form_hienthongtinnguoiban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form_hienthongtinnguoithue.resx">
+      <DependentUpon>Form_hienthongtinnguoithue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form_ngaythuetra.resx">
       <DependentUpon>Form_ngaythuetra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form_nhaploaisach.resx">
+      <DependentUpon>Form_nhaploaisach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form_nhapthongtinsach.resx">
+      <DependentUpon>Form_nhapthongtinsach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form_quanlyngansach.resx">
+      <DependentUpon>Form_quanlyngansach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Form_tinhtien_thue_ban.resx">
       <DependentUpon>Form_tinhtien_thue_ban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
